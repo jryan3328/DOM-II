@@ -25,10 +25,11 @@ topImg.addEventListener('dblclick', function(){
     topImg.src = 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png';
 })
 
-
+//TURNS INTRO H2 BLUE AND GIVES BACKGROUND
 const topHeadline = document.querySelector('.intro h2');
-    document.addEventListener('fullscreenchange', event =>{
+    document.addEventListener('contextmenu', event =>{
         topHeadline.style.color = 'blue';
+        topHeadline.style.border = 'solid';
     })
 
 
@@ -36,7 +37,7 @@ const topHeadline = document.querySelector('.intro h2');
 const topPara = document.querySelector('.intro p');
 
 document.addEventListener('scroll', function(){
-    topPara.style.color = 'darkgray';
+    topPara.style.color = 'blue';
 })
 
 //MAKING 'LETS GO' BIGGER AND SMALLER
@@ -58,5 +59,10 @@ const sectionHeadlines = document.querySelector('.content-section h2');
 //BUTTON FONT COLOR CHANGES WHEN ANY KEY IS RELEASED
 const botButton = document.querySelector('.btn');
     document.addEventListener('keyup', event => {
-    botButton.style.color = 'green';
+    botButton.style.backgroundColor = 'green';
+})
+
+topPara.addEventListener('select', event => {
+    alert('STOP SELECTING  ME');
+
 })
