@@ -11,6 +11,11 @@ logo.addEventListener('mouseover', event => {
 logo.addEventListener('mouseleave', event => {
     logo.style.color = 'black';
  });
+//NAV LINKS COLOR CHANGE
+ const navItems = document.querySelectorAll('a');
+ console.log(navItems);
+ 
+
 
 
  // NAVBAR COLOR CHANGE ONCLICK 
@@ -56,13 +61,22 @@ const sectionHeadlines = document.querySelector('.content-section h2');
 
 
 
-//BUTTON FONT COLOR CHANGES WHEN ANY KEY IS RELEASED
+//BUTTON BACKGROUND COLOR CHANGES WHEN ANY KEY IS RELEASED
 const botButton = document.querySelector('.btn');
     document.addEventListener('keyup', event => {
     botButton.style.backgroundColor = 'green';
 })
 
-topPara.addEventListener('select', event => {
+document.addEventListener('select', event => {
     alert('STOP SELECTING  ME');
 
+})
+
+const paragraphs = document.querySelectorAll('p');
+console.log(paragraphs);
+
+
+//PARAGRAPHS TURN WHITE WHEN SCREEN IS RESIZED
+window.addEventListener('resize', function(){
+    paragraphs.forEach(index => index.style.color = 'white');
 })
